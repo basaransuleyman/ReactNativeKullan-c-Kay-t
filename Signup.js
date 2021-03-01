@@ -1,4 +1,5 @@
 // SignUp.js
+//Login sayfası eklenecektir anlatılınca .
 import React from 'react'
 import {
   View,
