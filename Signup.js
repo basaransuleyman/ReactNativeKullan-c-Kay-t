@@ -11,15 +11,17 @@ import {
   ImageBackground,
   TouchableOpacity
 } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-import Logo from '../pages/Logo';
 export default class SignUp extends React.Component {
 
 
   state = {
    email: '', password: ''
+  }
+
+  onChangeText = (key, val) => {
+    this.setState({ [key]: val })
   }
 
 
