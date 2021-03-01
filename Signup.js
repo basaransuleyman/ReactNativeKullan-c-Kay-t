@@ -29,18 +29,9 @@ export default class SignUp extends React.Component {
   render() {
        const {navigate} = this.props.navigation;
     return (
-
-
-
-
    <View style={styles.container}>
-    <Logo/>
-
    <Text style={styles.input}>Kayıt</Text>
-
    <View style={styles.inputContainer}>
-
-
            <TextInput
                style={styles.inputs}
             placeholder='Email-KullanıcıAdı'
@@ -48,10 +39,7 @@ export default class SignUp extends React.Component {
             value={this.state.email}
             onChangeText={val => this.onChangeText('email', val)}
           />
-       
         </View>
-
-
    <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputs}
@@ -64,12 +52,10 @@ export default class SignUp extends React.Component {
         
 
       </View>
-
             <TouchableOpacity style={styles.submitButtonText}
               onPress={()=>this.props.navigation.navigate('Login')}>
              <Text style={styles.signUpText}>Kayıt</Text>
              </TouchableOpacity>
-
 
             <TouchableOpacity style={styles.submitButtonTextone}
               onPress={()=>this.props.navigation.navigate('Login')}>
@@ -77,7 +63,6 @@ export default class SignUp extends React.Component {
              </TouchableOpacity>
       </View>
 
-     
     )
   }
 }
