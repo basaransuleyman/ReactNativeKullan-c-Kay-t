@@ -35,7 +35,6 @@ userSchema.pre('save',function(next){
 
 })
 
-//girilen pass ile hash pass karsılastırma
 userSchema.methods.comparePassword = function(candidatePassword) {
     const user = this;
     return new Promise((resolve,reject)=>{
