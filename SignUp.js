@@ -1,5 +1,5 @@
 // SignUp.js
-//Login page eklenecek ilerde
+//Login page eklenecek ilerde 
 import React from 'react'
 import {
   View,
