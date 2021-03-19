@@ -28,14 +28,30 @@ userSchema.pre('save',function(next){
              return next(err)
          }
          user.password = hash;
-         next()
+         next() 
      })
 
     })
 
 })
 
+//girilen pass ile hash pass karsılastırma
+userSchema.methods.comparePassword = function(candidatePassword) {
+    const user = this;
+    return new Promise((resolve,reject)=>{
+        bcrypt.compare(candidatePassword,user.password,(err,isMatch)=>{
+            if(err){
+                return reject(err)
+            }
+            if (!isMatch){
+                return reject(err)
+            }
+            resolve(true)
+        })
+    })
 
+}
 
 mongoose.model('User',userSchema);
+
 
